@@ -24,7 +24,6 @@ SELECT *
 FROM Employees 
 WHERE LastName LIKE 'C%';
 
-
 4. Retrieve the order ID and customer name for all orders where the customer name starts with A.
 Here you will have to do a join of the Orders table and the Customers table.  Paste your SQL
 statement below.
@@ -46,16 +45,13 @@ ORDER BY Customers.CustomerName;
 6. Retrieve the list of customer names for customers that have no orders.  There are two ways to do this
 One is to use a subquery, as follows:
 
+This is a subquery -- we haven't talked about those.  But, you can do the same thing with a left
+join by comparing the OrderID column with NULL.  Paste your SQL statement below.
+
 SELECT Customers.CustomerName 
 FROM Customers 
 LEFT JOIN Orders ON Customers.CustomerID = Orders.CustomerID 
 WHERE Orders.OrderID IS NULL;
-
-
-This is a subquery -- we haven't talked about those.  But, you can do the same thing with a left
-join by comparing the OrderID column with NULL.  Paste your SQL statement below.
-
-
 
 7. Retrieve the OrderID and ProductName of every order for a product with Tofu in the name.
 Paste your SQL statement below.  You will have to join Orders, OrderDetails, and Products.
